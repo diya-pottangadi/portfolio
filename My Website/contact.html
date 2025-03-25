@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Diya</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <br>
+        <img src="profile.png" alt="Profile Picture" />
+        <h2>Diya</h2>
+        <p>Aspiring <br> UX Designer/Software Engineer</p>
+      </div>
+      <nav>
+        <a href="home.html">🏠 Home</a>
+        <a href="about.html">ℹ️ About</a>
+        <a href="experience.html">📚 Experience</a>
+        <a href="projects.html">🎨 Portfolio</a>
+        <a href="contact.html" class="active">📞 Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content contact-content">
+      
+      <!-- Heading -->
+      <div class="section-heading">
+        <h1>Contact</h1>
+      </div>
+
+      <!-- Top Info Cards -->
+      <div class="contact-info-cards">
+        <!-- Phone -->
+        <div class="info-card">
+          <div class="icon">📱</div>
+          <h3>Phone</h3>
+          <p>+1 848-250-6605</p>
+        </div>
+
+        <!-- E-Mail -->
+        <div class="info-card">
+          <div class="icon">✉️</div>
+          <h3>E-Mail</h3>
+          <p>dp938@njit.edu</p>
+        </div>
+
+        <!-- Location -->
+        <div class="info-card">
+          <div class="icon">📍</div>
+          <h3>Location</h3>
+          <p>Newark, NJ, USA</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Send Message</h2>
+        <form action="contact.php" method="POST">
+          <!-- Row 1: Name & Email -->
+          <div class="form-row">
+            <input type="text" placeholder="Your name" name="name" required>
+            <input type="email" placeholder="Your email address" name="email" required>
+          </div>
+          <!-- Row 2: Subject -->
+          <div class="form-row">
+            <input type="text" placeholder="Subject" name="subject" required>
+          </div>
+          <!-- Row 3: Message -->
+          <div class="form-row">
+            <textarea placeholder="Your message here..." name="message" rows="4" required></textarea>
+          </div>
+          <!-- Submit -->
+          <button type="submit" class="send-btn">Send Message</button>
+        </form>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
