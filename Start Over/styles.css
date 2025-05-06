@@ -27,12 +27,54 @@ body {
     border-right: 1px solid #ccc;
 }
 
-/* Sidebar Links */
-.sidebar nav ul li a{
-    list-style: none;
-    display: block;
-    padding: 0;
+.profile h2{
+    font-size: 24px;
+    color: #1e293b;
+    text-align: center;
+    font-family: DM Sans;
+    margin-top: 24px;
+    margin-bottom: 3px;
 }
+
+.profile p{
+    font-size: 13px;
+    color: #475569;
+    text-align: center;
+    font-family: DM Sans;
+    margin-top: 0px;
+}
+
+.profile img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav a {
+    display: block;
+    padding: 14px 0;
+    color: #1e293b;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px 0;
+    transition: background 0.3s;
+    font-style: normal;
+    text-align: center;
+}
+nav a:hover,
+nav a.active {
+    background-color: #e0f2fe;
+    color: #3b82f6;
+    font-style: normal;
+}
+
+
 
 /* Main Content Box */
 .content-box{
