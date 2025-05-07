@@ -94,5 +94,20 @@ nav a.active {
     left:342px;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
-    background-color: pink;
+    background: linear-gradient(to bottom, #F0F9FF, #E0F2FE);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* hero icon */
+.hero img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
