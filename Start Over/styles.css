@@ -9,7 +9,7 @@ body {
 /* Holds sidebar and content box */
 .main-container {
     display: flex;
-    height: 760px;
+    height: 790px;
     padding: 60px 74px 59px 73px;
     box-sizing: border-box;
 }
