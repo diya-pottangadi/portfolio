@@ -102,41 +102,42 @@ nav a.active {
 
 /* hero icon */
 .hero img{
-    width: 50%;
-    height: 50%;
+    width: 65%;
+    height: 65%;
     object-fit: cover;
     border-radius: 18px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* About header with line */
-.section-title-about{
+/* Section Header, reused for all sections */
+.section-title{
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
     margin: 3rem 0;
     font-size: 1.5rem;
     font-weight: 600;
     color: #222;
 }
 
-.section-title-about::before, 
-.section-title-about::after{
+.section-title::before, 
+.section-title::after{
     content: "";
-    width: 100rem;    
+    flex: 0.5;
     height: 1px;
     background: #60A5FA;
 }
 
-.section-title-about::before{
+.section-title::before{
     margin-right: 1em;
 }
 
-.section-title-about::after{
+.section-title::after{
     margin-left: 1em;
 }
 
@@ -164,62 +165,31 @@ nav a.active {
 }
 
 .box h3{
-    margin: 0 0 1rem auto;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #111;
+    font-size: 0.75rem;
+    color: #000000;
 }
 
 /* Commitment Section */
-
-.section-title-commitment{
-    display: flex;
-    align-items: center;
+.section-blurb{
     text-align: center;
-    margin: 3rem 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #222;
-}
-.section-title-commitment::before, 
-.section-title-commitment::after{
-    content: "";
-    width: 100rem;    
-    height: 1px;
-    background: #60A5FA;
+    color:#111;
 }
 
-.section-title-commitment::before{
-    margin-right: 1em;
+.six-col-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.section-title-commitment::after{
-    margin-left: 1em;
+.card.large{
+    grid-column: span 2;
 }
 
-
-/* Research */
-.section-title-research{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 3rem 0;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #222;
-}
-.section-title-research::before, 
-.section-title-research::after{
-    content: "";
-    width: 100rem;    
-    height: 1px;
-    background: #60A5FA;
-}
-
-.section-title-research::before{
-    margin-right: 1em;
-}
-
-.section-title-research::after{
-    margin-left: 1em;
+.card{
+    background: #CDE3FE;
+    border-radius: 0.5rem;
+    min-height: 100px;
 }
