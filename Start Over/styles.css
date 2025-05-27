@@ -96,7 +96,8 @@ nav a.active {
     border-bottom-right-radius: 18px;
     background: linear-gradient(to bottom, #F0F9FF, #E0F2FE);
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 /* hero icon */
@@ -110,4 +111,115 @@ nav a.active {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* About header with line */
+.section-title-about{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+}
+
+.section-title-about::before, 
+.section-title-about::after{
+    content: "";
+    width: 100rem;    
+    height: 1px;
+    background: #60A5FA;
+}
+
+.section-title-about::before{
+    margin-right: 1em;
+}
+
+.section-title-about::after{
+    margin-left: 1em;
+}
+
+/* About grid */
+
+.two-col-grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+.box{
+    background: #CDE3FE;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.box h3{
+    margin: 0 0 1rem auto;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+}
+
+/* Commitment Section */
+
+.section-title-commitment{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+}
+.section-title-commitment::before, 
+.section-title-commitment::after{
+    content: "";
+    width: 100rem;    
+    height: 1px;
+    background: #60A5FA;
+}
+
+.section-title-commitment::before{
+    margin-right: 1em;
+}
+
+.section-title-commitment::after{
+    margin-left: 1em;
+}
+
+
+/* Research */
+.section-title-research{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+}
+.section-title-research::before, 
+.section-title-research::after{
+    content: "";
+    width: 100rem;    
+    height: 1px;
+    background: #60A5FA;
+}
+
+.section-title-research::before{
+    margin-right: 1em;
+}
+
+.section-title-research::after{
+    margin-left: 1em;
 }
