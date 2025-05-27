@@ -160,7 +160,7 @@ nav a.active {
 
 .two-col-grid{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2.75fr 1.25fr;
     gap: 1rem;
     margin: 2rem auto;
     width: 90%;
@@ -168,8 +168,7 @@ nav a.active {
 }
 
 .box{
-    background: #CDE3FE;
-    border-radius: 0.75rem;
+    background: linear-gradient(#74a1d4, #3e5aa8);
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     min-height: 200px;
@@ -179,9 +178,9 @@ nav a.active {
     justify-content: flex-start;
 }
 
-.box h3{
-    font-size: 0.75rem;
-    color: #000000;
+.box p{
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 /* Commitment Section */
@@ -207,4 +206,16 @@ nav a.active {
     background: #CDE3FE;
     border-radius: 0.5rem;
     min-height: 100px;
+}
+
+/*Experience Section */
+.box1{
+    background: linear-gradient(#74a1d4, #3e5aa8);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 150px;
+    width: 53.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
 }
