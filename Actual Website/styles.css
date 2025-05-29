@@ -269,30 +269,54 @@ nav a.active {
 
 /*Blog Section*/
 
+.blog-section {
+  padding: 40px;
+  text-align: center;
+  font-family: Sans-serif;
+  
+}
+
+.blog-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Blog Container */
+.blog-container {
+    display: flex;
+    gap: 20px; 
+    justify-content: center; 
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
 .blog-card {
-  flex: 0 0 300px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    height: 22rem;
 }
 
 .blog-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .blog-card h3 {
-  font-size: 18px;
-  margin: 10px 0;
+    font-size: 1.25rem;
+    margin-left: 1rem;
+    color: black;
+    margin-bottom: 0px;
 }
 
 .blog-card p {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.4;
+    font-size: 0.9rem;
+    color: black;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
