@@ -320,13 +320,3 @@ nav a.active {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-
-.button {
-    background-color: #0020c1;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
