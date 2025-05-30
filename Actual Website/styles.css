@@ -320,3 +320,17 @@ nav a.active {
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
+/* Animation*/
+/* Sets elements further down*/
+.float-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* When in view, moves to normal position */
+.float-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
