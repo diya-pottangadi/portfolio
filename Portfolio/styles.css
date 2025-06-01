@@ -211,30 +211,43 @@ nav a.active {
 }
 
 /* Purpose Section */
+.carousel-wrapper{
+    margin: auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.carousel-viewport{
+    overflow: hidden;
+    width: 49.5rem;
+}
+
+.carousel-container{
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide{
+    flex: 0 0 15rem;
+    height: 15rem;
+    margin: 0 0.75rem;
+    background-color: #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
 .section-blurb{
-    text-align: center;
-    color:#111;
-}
+    margin: auto;
 
-.six-col-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
 }
-
-.card.large{
-    grid-column: span 2;
-}
-
-.card{
-    background: #CDE3FE;
-    border-radius: 0.5rem;
-    min-height: 100px;
-}
-
 /*Experience Section */
 
 .ex-container{
