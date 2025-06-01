@@ -244,23 +244,54 @@ nav a.active {
     color: #333;
 }
 
-.section-blurb{
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-}
-
 .carousel-prev-button{
-    width: 20px;
-    height: 20px;
-    object-fit: cover;
+    background-color: rgb(215, 248, 255);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
     border-radius: 50%;
-    border-color: gray;
-    background-color: transparent;
 }
 
 .carousel-prev-button:hover{
-    background-color:#3b82f6;
+    background-color: rgb(114, 194, 251);
+}
+
+.carousel-next-button{
+    background-color: rgb(215, 248, 255);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+}
+
+.carousel-next-button:hover{
+    background-color: rgb(114, 194, 251);
+}
+
+.Scroll-Left-Icon{
+    width: 10px;
+    height: 18px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.Scroll-Right-Icon{
+    width: 10px;
+    height: 18px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.section-blurb{
+   text-align: center;
 }
 
 /*Experience Section */
