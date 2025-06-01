@@ -246,8 +246,23 @@ nav a.active {
 
 .section-blurb{
     margin: auto;
-
+    justify-content: center;
+    align-items: center;
 }
+
+.carousel-prev-button{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    border-color: gray;
+    background-color: transparent;
+}
+
+.carousel-prev-button:hover{
+    background-color:#3b82f6;
+}
+
 /*Experience Section */
 
 .ex-container{
