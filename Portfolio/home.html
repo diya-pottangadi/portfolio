@@ -252,8 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <section id="contact">
             <hr class="divider">
             <h1 class = "section-title">Contact</h1>
-            
-
+            <p>Leave me a message down below!</p>
             <form action="https://api.web3forms.com/submit" method="POST">
 
                 <input type="hidden" name="access_key" value=59c72d66-e99f-443b-98c9-e3ce28fdf258>
@@ -267,9 +266,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
 
                 <div class = "form-group">
-                    <input id="message" type="message" name="message" placeholder="Message" required>
-                </div>
+                    <div class="message">
 
+                        <textarea id="message" type="message" name="message" placeholder="Message" required></textarea>
+                        
+                    </div>
+                </div>
                 <!-- Honeypot Spam Protection -->
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -284,4 +286,3 @@ document.addEventListener('DOMContentLoaded', () => {
     </main>
 
 </div>
-
