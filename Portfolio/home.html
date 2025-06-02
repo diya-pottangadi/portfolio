@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Me - Diya</title>
+  <title>Diya's Portfolio</title>
+  <link rel="icon" href="websiteIcon.png">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -26,6 +27,40 @@ document.addEventListener('DOMContentLoaded', () => {
         io.observe(el);
     });
     });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const track = document.querySelector(".carousel-container");
+    const slides = Array.from(track.children);
+    const prevBtn = document.querySelector(".carousel-prev-button");
+    const nextBtn = document.querySelector(".carousel-next-button");
+    const totalSlides = slides.length;
+    const visibleCount = 3; 
+    const maxStartIndex = totalSlides - visibleCount; 
+    let currentIndex = 0; 
+   
+    function moveTo(index) {
+        if (index < 0) {
+            currentIndex = maxStartIndex; 
+        } else if (index > maxStartIndex) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+        
+        const shiftPercent = (100 / visibleCount) * currentIndex; 
+        track.style.transform = `translateX(-${shiftPercent}%)`;
+
+        updateButtons();
+    }
+
+    prevBtn.addEventListener("click", () => moveTo(currentIndex - 1));
+    nextBtn.addEventListener("click", () => moveTo(currentIndex + 1));
+
+    moveTo(0);
+  });
 </script>
 
 
@@ -89,12 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         📍 NJ Institute of Technology <br>
                         🏫 B.S Computer Science <br>
                         👩🏾‍🏫 Minor in UX Design
-                        <br> <br>
+                        <br> <br> <br>
                         Event Coordinator @Women in Computing Society, NJIT <br> <br>
                         Coding Program Instructor @JerseySTEM <br> <br>
                         Resident Assistant @NJIT <br> <br>
 
-                        <br> <br> <br><br><br>
+                        <br> <br> <br><br>
                         Love to read, write, explore, and ceramics! 📖 📝 🗺️ 🏺 <br> <br>
                         Can you tell I love the color blue?
                     </p>
@@ -107,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <section class="carousel-wrapper">
 
-                    <button class="carousel-prev-button" aria-label="Previous slide"><img src="scroll-left.png" class="Scroll-Left-Icon"></button>
+                    <button class="carousel-prev-button" onclick="plusSlides(-1)" aria-label="Previous slide"><img src="scroll-left.png" class="Scroll-Left-Icon"></button>
                     <!-- <p>I'm all about the full-circle moments. Community and building that community is important. I love becoming the person that I once looked up to and serving as that person to others. </p> -->
                     <div class="carousel-viewport">
                         <div class = "carousel-container">
@@ -120,7 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
 
-                    <button class="carousel-next-button" aria-label="Next slide"><img src="scroll-right.png" class="Scroll-Right-Icon"></button>
+                    <button class="carousel-next-button" onclick="plusSlides(1)" aria-label="Next slide"><img src="scroll-right.png" class="Scroll-Right-Icon"></button>
+                
                 </section>
 
                 <br>

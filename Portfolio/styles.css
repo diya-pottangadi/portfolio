@@ -172,7 +172,7 @@ nav a.active {
 */
 
 
-/* About grid */
+/* About Section */
 
 .two-col-grid{
     display: grid;
@@ -221,7 +221,7 @@ nav a.active {
 
 .carousel-viewport{
     overflow: hidden;
-    width: 49.5rem;
+    width: 58.5rem;
 }
 
 .carousel-container{
@@ -230,7 +230,7 @@ nav a.active {
 }
 
 .slide{
-    flex: 0 0 15rem;
+    flex: 0 0 18rem;
     height: 15rem;
     margin: 0 0.75rem;
     background-color: #ddd;
