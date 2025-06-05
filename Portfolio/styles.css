@@ -355,6 +355,19 @@ nav a.active {
     line-height: 1.4;
 }  /*End of experience section styling*/
 
+/*Purpose Section */
+.box2{
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-height: 150px;
+    width: 53.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
 /*Blog Section*/
 
 .blog-section {
