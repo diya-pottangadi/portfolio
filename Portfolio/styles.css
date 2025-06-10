@@ -65,7 +65,9 @@ h1 {
 
 .profile a h3{
     font-size: 24px;
-    color: #1e293b;
+    background: -webkit-linear-gradient(#48bef9, #0c3178);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     margin-top: 24px;
     margin-bottom: 6px;
@@ -226,7 +228,7 @@ nav a.active {
 
 .box p{
     font-size: 1rem;
-    color:rgb(0, 0, 0);
+    color:rgb(0, 0, 80);
 }
 
 .box1{
@@ -238,7 +240,8 @@ nav a.active {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-} /*End of about section styling*/
+} 
+/*End of about section styling*/
 
 /* Purpose Section */
 .carousel-wrapper{
@@ -338,6 +341,7 @@ nav a.active {
 
 .ex-card{
     display: flex;
+    margin: auto;
     align-items: flex-start;
     width: 53.5rem;
     border: 1px solid #ddd;
@@ -345,6 +349,11 @@ nav a.active {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ex-card:hover{
+    box-shadow: 0 8px 8px rgba(0, 55, 254, 0.5);
 }
 
 .ex-card img{
@@ -376,15 +385,24 @@ nav a.active {
 }  /*End of experience section styling*/
 
 /*Purpose Section */
-.box2{
+.projects-grid{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: auto;
+    max-width: 900px;
+}
+
+.projects-box{
     background: white;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     min-height: 150px;
-    width: 53.5rem;
-    display: flex;
+    width: 24rem;
     justify-content: center;
-    margin: 0 auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin: auto;
     border-radius: 8px;
 }
 
