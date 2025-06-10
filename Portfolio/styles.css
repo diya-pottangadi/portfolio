@@ -10,9 +10,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: sans-serif;
+    font-family:'Inter', sans-serif;
     background: linear-gradient(to right, #DBEAFE 0%, #CDE3FE 33%, #BBD9FD 66%, #60A5FA 100%);
 }
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    background: -webkit-linear-gradient(#48bef9, #0c3178);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
 
 /* Main Container */
 /* Holds sidebar and content box */
@@ -147,14 +156,12 @@ nav a.active {
 
 /* Section Header, reused for all sections */
 .section-title{
-    display: flex;
-    align-items: center;
     text-align: center;
-    justify-content: center;
-    margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 600;
     color: #222;
+    flex-direction: column;
+    margin: 2rem 0 6px
 }
 
 .divider {
@@ -166,6 +173,14 @@ nav a.active {
     margin-top: 3rem;
     width: 48rem;
 } /*End of section divider styling*/
+
+.small-div {
+    width: 80px; /* adjust width as needed */
+    height: 4px;  /* adjust thickness as needed */
+    margin: 0 auto 24px auto; /* center the divider and add spacing */
+    background: linear-gradient(to right, #1e004b, #4a0a8f); /* adjust colors */
+    border-radius: 2px; /* optional, for rounded edges */
+}
 
 /*
 .section-title::before, 
@@ -198,7 +213,8 @@ nav a.active {
 }
 
 .box{
-    background: linear-gradient(#74a1d4, #3e5aa8);
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0.9;
     padding: 1.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     min-height: 200px;
@@ -210,7 +226,7 @@ nav a.active {
 
 .box p{
     font-size: 1rem;
-    color: #ffffff;
+    color:rgb(0, 0, 0);
 }
 
 .box1{
@@ -256,7 +272,12 @@ nav a.active {
     font-weight: bold;
     color: #333;
 }
-
+.slide img{
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 8px;
+}
 .carousel-prev-button{
     background-color: rgb(215, 248, 255);
     width: 2rem;
@@ -308,7 +329,6 @@ nav a.active {
 }  /*End of about section styling*/
 
 /*Experience Section */
-
 .ex-container{
     display: flex;
     flex-direction: column;
