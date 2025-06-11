@@ -279,7 +279,7 @@ nav a.active {
     flex: 0 0 18rem;
     height: 15rem;
     margin: 0 0.75rem;
-    background-color: #ddd;
+    background-color: white;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -288,12 +288,14 @@ nav a.active {
     font-weight: bold;
     color: #333;
 }
+
 .slide img{
     max-width: 100%;
     height: 100%;
     display: block;
     border-radius: 8px;
 }
+
 .carousel-prev-button{
     background-color: rgb(215, 248, 255);
     width: 2rem;
@@ -546,4 +548,14 @@ nav a.active {
 .float-up.in-view {
     opacity: 1;
     transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in-element {
+    animation: fadeIn 2s ease;
+    -webkit-animation: fadeIn 2s ease;
 }
