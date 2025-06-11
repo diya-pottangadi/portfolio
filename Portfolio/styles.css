@@ -138,6 +138,7 @@ nav a.active {
     justify-content: center;
     gap: 0.5rem;
     padding-bottom: 0.0rem;
+    margin-bottom: 0px;
 }
   
 .socials img {
@@ -558,4 +559,7 @@ nav a.active {
 .fade-in-element {
     animation: fadeIn 2s ease;
     -webkit-animation: fadeIn 2s ease;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
