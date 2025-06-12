@@ -369,7 +369,7 @@ nav a.active {
 }
 
 .ex-card:hover{
-    box-shadow: 0 8px 8px rgba(0, 55, 254, 0.5);
+    box-shadow: 0 8px 8px rgba(0, 128, 255, 0.8);
 }
 
 .ex-card img{
