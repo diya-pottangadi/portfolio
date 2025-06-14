@@ -127,7 +127,7 @@ nav a {
 }
 nav a:hover,
 nav a.active {
-    background-color: #e0f2fe;
+    background-color: #c3e6fe;
     color: #3b82f6;
     font-style: normal;
 } 
@@ -412,11 +412,12 @@ nav a.active {
 
 /*Purpose Section */
 .projects-grid{
-    display: flex;
+    display: grid;
     gap: 1rem;
     align-items: center;
     margin: auto;
     max-width: 900px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .flip-card{
@@ -533,6 +534,40 @@ nav a.active {
     align-items: center;
 }
 
+
+.icon{
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
+.iconG{
+    height: 1em;
+    width: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
+.icon-back{
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+    color: black;
+}
+
+.icon-back:hover{
+    background: rgb(147, 225, 251);
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
 #contact form{
     width: 75%;
     flex-direction: column;
@@ -587,6 +622,9 @@ nav a.active {
     color: white;
 } /* End of Contact Form Styling */
 
+
+
+
 /* Animation*/
 /* Sets elements further down*/
 .float-up {
@@ -612,18 +650,4 @@ nav a.active {
     display: flex;
     flex-direction: column;
     flex: 1;
-}
-
-.icon{
-    height: 1em;
-    width: 1em;
-    vertical-align: middle;
-    margin-right: 0.3em;
-}
-
-.iconG{
-    height: 1em;
-    width: 1.5em;
-    vertical-align: middle;
-    margin-right: 0.3em;
 }
