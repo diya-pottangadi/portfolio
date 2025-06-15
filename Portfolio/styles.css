@@ -32,6 +32,13 @@ h1 {
     overflow: auto;
 }
 
+@media (max-width: 768px){
+    .main-container{
+        padding: 10px 15px;
+    }
+    
+}
+
 .panels{
     display: flex;                
     border-radius: 18px;           
@@ -307,7 +314,7 @@ nav a.active {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
-}
+}\
 
 .slide img{
     max-width: 100%;
