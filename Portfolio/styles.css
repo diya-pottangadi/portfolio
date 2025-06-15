@@ -724,3 +724,9 @@ nav a.active {
     flex-direction: column;
     flex: 1;
 }
+
+@supports(padding-top: env(safe-area-inset-top)) {
+    body {
+        padding-top: env(safe-area-inset-top);
+    }
+}
