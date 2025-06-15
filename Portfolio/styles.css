@@ -284,8 +284,7 @@ nav a.active {
 
 @media (max-width: 600px){
     .two-col-grid{
-        flex-direction: column;
-        display: flex;
+        grid-template-columns: 1fr;
     }
 }
 /*End of about section styling*/
