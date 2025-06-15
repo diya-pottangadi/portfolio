@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-
+<!--Floating Up JS-->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const els = document.querySelectorAll( '.hero img, .box, .ex-card, .blog-card, .card, .section-title');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 </script>
 
-
+<!--Carousel Movement JS-->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const track = document.querySelector(".carousel-container");
@@ -66,40 +66,63 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 </script>
 
+<!--Hamburger Functionality Mobile View JS-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const sidebar = document.querySelector(".sidebar");
+
+    toggleBtn.addEventListener("click", () => {
+      sidebar.style.display = sidebar.style.display === "flex" ? "none" : "flex";
+    });
+
+    document.querySelectorAll(".sidebar nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          sidebar.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
 
 <body>
 <div class="main-container">
     <div class="panels">
 
+    <img src="hamburger.png" class="menu-toggle" alt="Open Menu">
+
     
     <!-- Sidebar -->
+
     <aside class = "sidebar">
 
         <div class="fade-in-element">
-
             <!--Profile Section-->
-            <div class="profile">
-                <img src="Proff Pic.png" alt="Profile Picture" />
-                <a href="mailto:dp938@njit.edu" target="_blank" class="no-underline-link"><h3>Diya Pottangadi</h3> </a>
-                <p>Computer Science + User Experience </p>
-            </div>
+                <div class="profile">
+                    <img src="Proff Pic.png" alt="Profile Picture" />
+                    <a href="mailto:dp938@njit.edu" target="_blank" class="no-underline-link"><h3>Diya Pottangadi</h3> </a>
+                    <p>Computer Science + User Experience </p>
+                </div>
 
-            <!--Navigation-->
-            <nav>
-                <a href="#home">🏠</a>
-                <a href="#about">👩🏾‍💻</a>
-                <a href="#experience">📚</a>
-                <a href="#projects">🎨</a>
-                <a href="#blog">✍🏾 </a>
-                <a href="#contact">📞</a>
-            </nav>
+                <nav>
+                    <a href="#home">🏠</a>
+                    <a href="#about">👩🏾‍💻</a>
+                    <a href="#experience">📚</a>
+                    <a href="#projects">🎨</a>
+                    <a href="#blog">✍🏾 </a>
+                    <a href="#contact">📞</a>
+                </nav>
 
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/diyapottangadi/" target="_blank"> <img src="linkedinIcon.png" alt="LinkedIn"/> </a>
-                <a href="https://github.com/diya-pottangadi" target="_blank"> <img src="githubIcon.png" alt="Github"/> </a>
-            </div>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/diyapottangadi/" target="_blank"> <img src="linkedinIcon.png" alt="LinkedIn"/> </a>
+                    <a href="https://github.com/diya-pottangadi" target="_blank"> <img src="githubIcon.png" alt="Github"/> </a>
+                </div>
         </div>
+                
     </aside>
+
     <!-- Main Content -->
 
     <main class="content-box">
@@ -374,3 +397,4 @@ document.addEventListener('DOMContentLoaded', () => {
     </main>
 </div>
 
+<body>
