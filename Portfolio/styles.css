@@ -5,8 +5,13 @@ html, body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to right, #0a0f2c, #142850, #27496d, #3b8beb);
-
 } 
+
+.safe-area-top{
+    background: linear-gradient(to right, #0a0f2c, #142850, #27496d, #3b8beb);
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top)
+}
 
 body{
     display: flex;
@@ -471,6 +476,7 @@ nav a.active {
 
 .flip-card{
     perspective: 1000px;
+    cursor: pointer;
 }
 
 .flip-card-inner{
@@ -496,6 +502,11 @@ nav a.active {
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);       
 }
+
+.flip-card.is-flipped .flip-card-inner{
+    transform: rotateY(180deg);
+}
+
 
 .flip-card-front, .flip-card-back{
     width: 100%;
