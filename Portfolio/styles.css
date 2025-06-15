@@ -4,6 +4,8 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background: linear-gradient(to right, #0a0f2c, #142850, #27496d, #3b8beb);
+
 } 
 
 body{
@@ -20,7 +22,6 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 
 /* Main Container */
 /* Holds sidebar and content box */
@@ -228,13 +229,12 @@ nav a.active {
 } /*End of section divider styling*/
 
 .small-div {
-    width: 80px; /* adjust width as needed */
-    height: 4px;  /* adjust thickness as needed */
-    margin: 0 auto 24px auto; /* center the divider and add spacing */
-    background: linear-gradient(to right, #1e004b, #4a0a8f); /* adjust colors */
-    border-radius: 2px; /* optional, for rounded edges */
+    width: 80px; 
+    height: 4px;  
+    margin: 0 auto 24px auto; 
+    background: linear-gradient(to right, #1e004b, #4a0a8f);
+    border-radius: 2px; 
 }
-
 /* About Section */
 
 .two-col-grid{
@@ -432,16 +432,41 @@ nav a.active {
     font-size: 14px;
     color: #555;
     line-height: 1.4;
-}  /*End of experience section styling*/
+}  
 
-/*Purpose Section */
-.projects-grid{
+@media (max-width: 600px){
+     .ex-card {
+        width: 90%; 
+        padding: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .ex-card h3 {
+        font-size: 16px; 
+    }
+
+    .ex-card p {
+        font-size: 12px; 
+    }
+
+    .ex-card img {
+        height: 4rem; 
+        width: 4rem; 
+    }
+}
+
+
+/*Projects Section */
+.projects-container{
     display: grid;
     gap: 1rem;
-    align-items: center;
-    margin: auto;
+    margin: 0 auto;
     max-width: 900px;
-    grid-template-columns: 1fr 1fr;
+    padding: 0 1rem;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .flip-card{
@@ -450,12 +475,15 @@ nav a.active {
 
 .flip-card-inner{
     background-color: white;
-    width: 28rem;
-    height: 13rem;
+    aspect-ratio: 28/13;
+    width: 100%;
+    max-width: 28rem;
+
     gap: 20px;
-    margin: auto;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
+
     border-radius: 12px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
@@ -463,6 +491,7 @@ nav a.active {
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
+
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);       
@@ -492,12 +521,17 @@ nav a.active {
     flex-direction: column;
 }
 
-@media (max-width: 768px){
-    .projects-grid{
-        flex-direction: column;
-        display: flex;
+@media (max-width: 1200px){
+    .projects-container{
+        grid-template-columns: 1fr;
     }
+
+    .flip-card-inner{
+        max-width: none;
+    }
+
 }/*End of Projects Mobile View Styling*/
+
 
 /*Blog Section*/
 
@@ -652,9 +686,6 @@ nav a.active {
     background-color: rgb(1, 156, 223);
     color: white;
 } /* End of Contact Form Styling */
-
-
-
 
 /* Animation*/
 /* Sets elements further down*/
