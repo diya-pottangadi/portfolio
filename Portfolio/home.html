@@ -70,32 +70,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!--Hamburger Functionality Mobile View JS-->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     const toggleBtn = document.querySelector(".menu-toggle");
     const sidebar = document.querySelector(".sidebar");
 
     toggleBtn.addEventListener("click", () => {
-      sidebar.style.display = sidebar.style.display === "flex" ? "none" : "flex";
+        sidebar.style.display = sidebar.style.display === "flex" ? "none" : "flex";
     });
 
     document.querySelectorAll(".sidebar nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
-          sidebar.style.display = "none";
-        }
-      });
+        link.addEventListener("click", () => {
+            if (window.innerWidth <= 768) {
+            sidebar.style.display = "none";
+            }
+        });
     });
   });
 </script>
 
 <script>
-  document.querySelectorAll('.flip-card').forEach(card => {
-
-    card.addEventListener('pointerdown', e=> {
-        e.preventDefault();
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('pointerdown', e => {
+        e.preventDefault();              
         card.classList.toggle('is-flipped');
-    });
-
+    }, { passive: false });            
   });
 </script>
 
