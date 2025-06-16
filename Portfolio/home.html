@@ -90,11 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <script>
   document.querySelectorAll('.flip-card').forEach(card => {
-    card.addEventListener('click', () => {
-        card.classList.toggle('is-flipped');
-    });
 
-    card.addEventListener('touchstart', () => {
+    card.addEventListener('pointerdown', e=> {
+        e.preventDefault();
         card.classList.toggle('is-flipped');
     });
 
