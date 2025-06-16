@@ -15,7 +15,7 @@ body{
     min-height: 100vh;
     align-items: flex-start;
     font-family:'Inter', sans-serif;
-    background: linear-gradient(to right, #0a0f2c, #142850, #27496d, #3b8beb);
+    background: transparent;
 }
 
 h1 {
