@@ -38,9 +38,11 @@ h1 {
 
 @media (max-width: 768px){
     .main-container{
-        padding: 10px 15px;
-        max-height: none;
-        overflow: visible;
+        padding: 15px 0px;
+        max-height: 100vh;
+        overflow: none;
+        margin: auto;
+        width: 87%;
     }
     
 }
