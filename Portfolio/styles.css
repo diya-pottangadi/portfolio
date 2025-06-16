@@ -193,10 +193,10 @@ nav a.active {
         z-index: 998;
         width: 269px;
         flex-direction: column;
-        background: linear-gradient(to bottom, #85ceff, #d7efff);
+        background: linear-gradient(to bottom, #96d4fe, #d7efff);
         padding: 20px;
         overflow-y: auto;
-        border-radius: 12px;
+        border-radius: 0px;        
     }
 
     .menu-toggle{
