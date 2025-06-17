@@ -532,12 +532,7 @@ nav a.active {
 }
 
 
-.flip-card:hover:not(.is-flipped) .flip-card-inner {
-    transform: rotateY(180deg);       
-}
-
 .flip-card.is-flipped .flip-card-inner{
-    transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
@@ -567,6 +562,13 @@ nav a.active {
     color: #fff;
     transform: rotateY(180deg);
     flex-direction: column;
+}
+
+
+@media (hover: hover) and (pointer: fine){
+    .flip-card:hover .flip-card-inner{
+        transform: rotateY(180deg);
+    }
 }
 
 @media (max-width: 1200px){
