@@ -97,9 +97,9 @@ function flipHandler(e) {
 
 document.querySelectorAll('.flip-card').forEach(card => {
     if (window.PointerEvent) {
-      card.addEventListener('pointerdown', flipHandler, { passive: false });
+        card.addEventListener('pointerdown', flipHandler, { passive: false });
     } else {
-      card.addEventListener('touchend', flipHandler, { passive: false });
+        card.addEventListener('touchend', flipHandler, { passive: false });
     }
   });
 </script>
@@ -412,5 +412,17 @@ document.querySelectorAll('.flip-card').forEach(card => {
     </div>
     </main>
 </div>
+
+<script>
+    function flipHandler(e) {
+        this.classList.toggle('is-flipped');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', flipHandler);
+        });
+    });
+</script>
 
 <body>
