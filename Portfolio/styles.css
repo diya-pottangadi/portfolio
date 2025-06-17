@@ -532,7 +532,7 @@ nav a.active {
 }
 
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover:not(.is-flipped) .flip-card-inner {
     transform: rotateY(180deg);       
 }
 
