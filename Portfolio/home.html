@@ -88,21 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 
-<script>
-function flipHandler(e) {
-    e.preventDefault();            
-    e.stopPropagation();
-    this.classList.toggle('is-flipped');
-}
-
-document.querySelectorAll('.flip-card').forEach(card => {
-    if (window.PointerEvent) {
-        card.addEventListener('pointerdown', flipHandler, { passive: false });
-    } else {
-        card.addEventListener('touchend', flipHandler, { passive: false });
-    }
-  });
-</script>
 
 <body>
 <div class="main-container">
@@ -426,3 +411,4 @@ document.querySelectorAll('.flip-card').forEach(card => {
 </script>
 
 <body>
+</html>

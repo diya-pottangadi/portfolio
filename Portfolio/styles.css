@@ -499,6 +499,9 @@ nav a.active {
     -webkit-touch-callout: none;
     perspective: 1000px;
     cursor: pointer;
+
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
 }
 
 .flip-card-inner{
@@ -523,6 +526,9 @@ nav a.active {
     transform-style: preserve-3d;
     -webkit-transition: transform 0.6s;
     transition: transform 0.6s;
+
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
 }
 
 
@@ -532,8 +538,9 @@ nav a.active {
 
 .flip-card.is-flipped .flip-card-inner{
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
-
 
 .flip-card-front, .flip-card-back{
     width: 100%;
