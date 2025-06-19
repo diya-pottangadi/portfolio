@@ -1,8 +1,0 @@
-
-To Do List:
-
-- map out project page
-    - if adding 2 buttons, which page will it navigate to
-- map out and implement blog page 
-    - when you click on blog, which page will it navigate to and what will it look like?
-- add typing animation to computer screen

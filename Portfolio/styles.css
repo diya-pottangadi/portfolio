@@ -60,7 +60,7 @@ h1 {
     border-bottom-left-radius: 18px;
     padding: 20px; 
     background: linear-gradient(to bottom, #e0f2fe, #dbeafe);
-    border-right: 1px solid #ccc;
+    border-right: 0.2px solid #ccc;
 }
 
 
@@ -306,7 +306,7 @@ nav a.active {
     box-shadow: 0 12px 12px rgba(0, 128, 255, 0.8);
 }
 
-@media (max-width: 600px){
+@media (max-width: 875px){
     .two-col-grid{
         grid-template-columns: 1fr;
     }
@@ -324,18 +324,28 @@ nav a.active {
 
 .carousel-viewport{
     overflow: hidden;
-    width: 58.5rem;
+    width: 90%;
 }
 
 .carousel-container{
     display: flex;
-    transition: transform 0.3s ease-in-out;
+    /*transition: transform 0.3s ease-in-out;*/
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+carousel-container::-webkit-scrollbar{
+    display: none;
 }
 
 .slide{
-    flex: 0 0 18rem;
+    scroll-snap-align: start;
+    flex: 0 0 80%;
+    max-width: 300px;
+    margin: 0 0.5rem;
     height: 15rem;
-    margin: 0 0.75rem;
+    aspect-ratio: 1/1;
     background-color: white;
     border-radius: 8px;
     display: flex;
@@ -344,8 +354,18 @@ nav a.active {
     font-size: 2rem;
     font-weight: bold;
     color: #333;
+    /*
+    flex: 0 0 18rem;
+    margin: 0 0.75rem;
+
+    */
 }
 
+@media (min-width: 768px){
+    .slide{
+        flex: 0 0 30%;
+    }
+}
 .slide img{
     max-width: 100%;
     height: 100%;
@@ -355,8 +375,8 @@ nav a.active {
 
 .carousel-prev-button{
     background-color: rgb(215, 248, 255);
-    width: 2rem;
-    height: 2rem;
+    width: 5vh;
+    aspect-ratio: 1/1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -370,8 +390,8 @@ nav a.active {
 
 .carousel-next-button{
     background-color: rgb(215, 248, 255);
-    width: 2rem;
-    height: 2rem;
+    width: 5vh;
+    aspect-ratio: 1/1;
     display: flex;
     align-items: center;
     justify-content: center;
