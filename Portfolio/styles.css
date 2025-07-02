@@ -199,6 +199,7 @@ nav a.active {
         border-radius: 0px;        
     }
 
+
     .menu-toggle{
         display: block;
         background-color: transparent;
@@ -324,7 +325,7 @@ nav a.active {
 
 .carousel-viewport{
     overflow: hidden;
-    width: 90%;
+    width: 85%;
 }
 
 .carousel-container{
@@ -339,7 +340,6 @@ nav a.active {
 carousel-container::-webkit-scrollbar{
     display: none;
 }
-
 .slide{
     scroll-snap-align: start;
     flex: 0 0 80%;
@@ -355,12 +355,31 @@ carousel-container::-webkit-scrollbar{
     font-size: 2rem;
     font-weight: bold;
     color: #333;
-    /*
-    flex: 0 0 18rem;
-    margin: 0 0.75rem;
 
-    */
+    position: relative;
 }
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;          
+    width: 100%;
+    background: rgba(211, 211, 211, 0.7);
+    color: black;       
+    padding: 0.5rem;    
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 0.7rem;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 
 @media (min-width: 768px){
     .slide{
@@ -422,6 +441,9 @@ carousel-container::-webkit-scrollbar{
 
 .section-blurb{
    text-align: center;
+   margin: auto;
+   padding-right: 60px;
+   padding-left: 60px;
 }  /*End of about section styling*/
 
 /*Experience Section */
