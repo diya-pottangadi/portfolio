@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Diya's Portfolio</title>
+    <link rel="icon" href="websiteIcon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<!--Floating Up JS-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const els = document.querySelectorAll('.hero img, .box, .ex-card, .blog-card, .card, .section-title');
+
+        const io = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        els.forEach(el => {
+            el.classList.add('float-up');
+            io.observe(el);
+        });
+    });
+</script>
+
+<!--Carousel Movement JS-->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const track = document.querySelector('.carousel-container');
+        const slides = Array.from(track.children);
+        const prevBtn = document.querySelector('.carousel-prev-button');
+        const nextBtn = document.querySelector('.carousel-next-button');
+
+        prevBtn.addEventListener('click', () => {
+            const slideWidth = slides[0].getBoundingClientRect().width + parseFloat(getComputedStyle(slides[0]).marginRight) * 2;
+            track.scrollBy({ left: -slideWidth, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            const slideWidth = slides[0].getBoundingClientRect().width + parseFloat(getComputedStyle(slides[0]).marginRight) * 2;
+            track.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        });
+
+    });
+
+</script>
+
+<!--Hamburger Functionality Mobile View JS-->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.querySelector(".menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+
+        toggleBtn.addEventListener("click", () => {
+            sidebar.style.display = sidebar.style.display === "flex" ? "none" : "flex";
+        });
+
+        document.querySelectorAll(".sidebar nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                if (window.innerWidth <= 768) {
+                    sidebar.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
+
+
+<body>
+    <div class="main-container">
+        <div class="panels">
+
+            <img src="hamburger.png" class="menu-toggle" alt="Open Menu">
+
+
+            <!-- Sidebar -->
+
+            <aside class="sidebar">
+
+                <div class="fade-in-element">
+                    <!--Profile Section-->
+                    <div class="profile">
+                        <img src="me.jpeg" alt="Profile Picture" />
+                        <a href="mailto:dp938@njit.edu" target="_blank" class="no-underline-link">
+                            <h3>Diya Pottangadi</h3>
+                        </a>
+                        <p>Computer Science + User Experience </p>
+                    </div>
+
+                    <nav>
+                        <a href="#home">🏠</a>
+                        <a href="#about">👩🏾‍💻</a>
+                        <a href="#experience">📚</a>
+                        <a href="#projects">🎨</a>
+                        <a href="#blog">✍🏾 </a>
+                        <a href="#contact">📞</a>
+                    </nav>
+
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/diyapottangadi/" target="_blank"> <img
+                                src="linkedinIcon.png" alt="LinkedIn" /> </a>
+                        <a href="https://github.com/diya-pottangadi" target="_blank"> <img src="githubIcon.png"
+                                alt="Github" /> </a>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Main Content -->
+
+            <main class="content-box">
+
+                <!-- Home Page-->
+                <section id="home">
+                    <div class="hero">
+                        <div class="fade-in-element">
+                            <img src="hero.png" alt="Computer Icon">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- About Me Section -->
+                <section id="about">
+                    <hr class="divider">
+                    <h1 class="section-title">About Me</h1>
+                    <div class="small-div"></div>
+                    <section class="two-col-grid">
+
+                        <div class="box">
+                            <p>Welcome! 👋🏾 I'm Diya, a 3rd year Computer Science student with a minor in the Design of
+                                the
+                                User Experience. <br> <br>
+                                My passion for technology really took off in the 11th grade, when I learned how deeply
+                                tech connects
+                                and powers everything around us—from basic webpages to complex search engines and
+                                everything in between.
+                                <br>This fascination led me to not only wanting to learn how tech works, but how to
+                                develop applications myself.
+
+                                <br><br>
+                                I love to learn, and I like to think about these prime years of discovery as my journey
+                                in tech—exploring new concepts, honing my skills, finding my space, and truly figuring
+                                out what I
+                                love and want to do. Along the way, I found a love for user experience, because every
+                                feature developed
+                                has a reason behind it, and its cool figuring out why.
+
+                                <br> <br>
+                                But when I'm not coding or prototying, you can catch me reading a book (scroll down for
+                                my blog!) or <s> touching grass</s> enjoying the great outdoors.
+                                <br> <br>
+                                Anyways, <strong>welcome to my portfolio</strong>, so glad to have you here :).
+                            </p>
+                        </div>
+                        <div class="box">
+                            <p>
+                                📍 NJ Institute of Technology <br>
+                                🏫 B.S Computer Science <br>
+                                👩🏾‍🏫 Minor in UX Design
+                                <br> <br> <br><br> <br>
+                                I'm also a...<br> <br>
+                                📝 Event Coordinator, <br>
+                                <i>Women in Computing Society, NJIT</i> <br> <br>
+                                👩🏾‍💻 Coding Program Instructor,<br>
+                                <i>JerseySTEM </i><br> <br>
+                                🔑 Resident Assistant, <br>
+                                <i>NJIT </i><br>
+                            </p>
+                        </div>
+
+                    </section>
+
+                    <hr class="divider">
+                    <h1 class="section-title">Purpose</h1>
+                    <div class="small-div"></div>
+                    <p class="section-blurb">I'm all about those full circle moments :)</p>
+                    <br>
+                    <section class="carousel-wrapper">
+
+                        <button class="carousel-prev-button" aria-label="Previous slide"><img src="scroll-left.png"
+                                class="Scroll-Left-Icon"></button>
+                        <div class="carousel-viewport">
+                            <div class="carousel-container">
+                                <div class="slide">
+                                    <img src="wics.jpeg">
+                                    <div class="slide-caption">Last Spring Semester Event, Women in Computing Society
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="js.jpg">
+                                    <div class="slide-caption">Developing video games with Scratch through JerseySTEM
+                                    </div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="Common Ground.jpeg">
+                                    <div class="slide-caption">Presenting our workshop on Diversity, Equity, and
+                                        Inclusion (DEI), Common Ground, reaching more than 500+</div>
+                                </div>
+
+                                <div class="slide">
+                                    <img src="rw.jpeg">
+                                    <div class="slide-caption">Closing out 1 year as a Resident Assistant ✅</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button class="carousel-next-button" onclick="plusSlides(1)" aria-label="Next slide"><img
+                                src="scroll-right.png" class="Scroll-Right-Icon"></button>
+
+                    </section>
+
+                    <br>
+                    <div class="purpose-blurb">
+                        <p class="section-blurb">I love giving back and I really value building and preserving
+                            community.<br> Pictured above are some things I love doing!
+
+                    </div>
+                </section>
+
+                </section>
+
+                <!-- Experience -->
+                <section id="experience">
+                    <hr class="divider">
+                    <h1 class="section-title">Technical Experience</h1>
+                    <div class="small-div"></div>
+                    <div class="ex-container">
+
+                        <div class="ex-card">
+                            <img src="fieldworker.jpeg" alt="Placeholder">
+                            <div class="ex-card-content">
+                                <h3>UI/UX Intern, Fieldworker</h3>
+                                <p1>May 2025 - August 2025</p1>
+                                <p></p>
+                            </div>
+                        </div>
+
+                        <div class="ex-card">
+                            <img src="njit.svg" alt="Placeholder">
+                            <div class="ex-card-content">
+                                <h3>Machine Learning Research Fellow, NJIT</h3>
+                                <p1>May 2025 - Present</p1>
+                                <p><a href="https://docs.google.com/document/d/14j-3_O2YIwc-OiA4Gq1t-jcLPzeDBnc3r6n5npZGh3k/edit?usp=sharing"
+                                        target="_blank">Research Project Abstract</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects">
+                    <hr class="divider">
+                    <h1 class="section-title">Portfolio</h1>
+                    <div class="small-div"></div>
+
+                    <div class="projects-container">
+
+                        <!--Card 1-->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="one">
+                                        <img src="card-updates.png">
+                                    </div>
+                                    <h3>Exploring Impact of UI/UX App Updates </h3>
+
+                                    <div class="tags">
+                                        <div class="tag">
+                                            <p1>UX Research</p1>
+                                        </div>
+
+                                        <div class="tag">
+                                            <p1>Interview Study</p1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Exploring Impact of UI/UX App Updates</h2>
+                                    <p>This interview study explores how users are impacted by UI/UX updates on their
+                                        favorite platforms.
+                                        <br><br>Methodology to analyze results include coding, code cycling, and
+                                        developing a code category.
+                                        <br><br>Read my report and analysis <a
+                                            href="https://docs.google.com/document/d/1ZQ9bS--7yz1tivsxy1_sIUY5FQnoq153-sgOASsN4WU/edit?usp=sharing"
+                                            target="_blank">here!</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Card 2-->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="two">
+                                        <img src="card-perceptions.png">
+                                    </div>
+                                    <h3>Investigating How Job Titles in Tech Influence Perceptions of Value</h3>
+
+                                    <div class="tags">
+                                        <div class="tag">
+                                            <p1>UX</p1>
+                                        </div>
+
+                                        <div class="tag">
+                                            <p1>Study</p1>
+                                        </div>
+
+                                        <div class="tag">
+                                            <p1>Card Sort</p1>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Semantic Status: Study & Report</h2>
+                                    <p>This research and study was conducted as a group project for my Designing the
+                                        User
+                                        Experience course. <br><br>We explored how the title of a job, specifically in
+                                        tech, affects
+                                        perceptions of prestige, personal appeal, and personal wellness.
+                                        <br><br>Read the report and analysi <a
+                                            href="https://docs.google.com/document/d/1SLn_O1Q7jACGBfsQ3mRY2dfRqNge34W4H6EelCR7EIc/edit?usp=sharing"
+                                            target="_blank">here!</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Card 3-->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="card-portfolio.png">
+
+                                    <h3>My Portfolio Site</h3>
+                                    <div class="tags">
+                                        <div class="tag">
+                                            <p1>Web Dev</p1>
+                                        </div>
+
+                                        <div class="tag">
+                                            <p1>Design</p1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Portfolio Site</h2>
+                                    <p>Developed using HTML, CSS, and JavaScript</p>
+                                    <p>Check out the Github Repo: <a href="https://github.com/diya-pottangadi/portfolio"
+                                            target="_blank">Github</a> </p>
+                                    <p>Read more about the design/development process: <a
+                                            href="https://www.notion.so/My-Portfolio-A-Long-Time-In-Progress-2242228ebc278039a47ed716d81bbe75"
+                                            target="_blank">Link
+                                            to Blog Page</a></p>
+                                    <p>Check out my basic Figma Design: <a
+                                            href="https://www.figma.com/proto/QGowS3wkhiGjnr3YPUy2go/Personal-Website-Prototype?node-id=0-1&t=8i5l0gUnSVwhJnnb-1"
+                                            target="_blank">Figma
+                                            Prototype</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Card 4-->
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <h2>Coming Soon!</h2>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h2>Coming Soon!</h2>
+                                    <p>Stay tuned!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Blog/Jouney -->
+                <section id="blog">
+                    <hr class="divider">
+                    <h1 class="section-title">My Journey</h1>
+                    <div class="small-div"></div>
+                    <p class="section-blurb">Thought I'd exercise my love for writing while documenting <br> this
+                        beautiful journey in tech—a reminder that career isn't always linear.</p>
+
+
+                    <div class="blog-container">
+
+
+                        <div class="blog-card">
+                            <a href="https://www.notion.so/My-Portfolio-A-Long-Time-In-Progress-2242228ebc278039a47ed716d81bbe75?source=copy_link"
+                                target="_blank" class="no-underline-link">
+                                <img src="blog-portfolio.png" alt="picture">
+                                <h3>Piloting my Portfolio </h3>
+                                <p1>July 2, 2025</p1>
+                                <p>The long but rewarding process in executing this project—from designing to
+                                    developing to deployment</p>
+                            </a>
+
+                        </div>
+
+                        <div class="blog-card">
+                            <img src="blog-holder.jpg" alt="Placeholder">
+                            <h3>Coming Soon!</h3>
+                            <p>Coming Soon!</p>
+                        </div>
+
+                        <div class="blog-card">
+                            <img src="blog-holder.jpg" alt="Placeholder">
+                            <h3>Coming Soon!</h3>
+                            <p>Coming Soon!</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact">
+                    <hr class="divider">
+                    <h1 class="section-title">Contact</h1>
+                    <div class="small-div"></div>
+                    <p>Let's Connect!</p>
+
+                    <div class="icon-container">
+                        <div class="icon-back">
+                            <a href="https://www.linkedin.com/in/diyapottangadi/" class="no-underline-link"
+                                target="_blank"> <img src="linkedinIcon.png" class="icon" />@diyapottangadi</a>
+                        </div>
+                        <div class="icon-back">
+                            <a href="https://github.com/diya-pottangadi" class="no-underline-link" target="_blank"> <img
+                                    src="githubIcon.png" class="icon" />@diya-pottangadi </a>
+                        </div>
+                        <div class="icon-back">
+                            <a href="mailto:dp938@njit.edu" class="no-underline-link" target="_blank"> <img
+                                    src="gmailIcon.png" class="iconG" />@dp938@njit.edu</a>
+                        </div>
+                    </div>
+
+                    <br>
+                    <p>Send me a message down below or say hi!</p>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+
+                        <input type="hidden" name="access_key" value=59c72d66-e99f-443b-98c9-e3ce28fdf258>
+
+                        <div class="form-group">
+                            <input id="name" type="text" name="name" placeholder="Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="email" type="email" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="message">
+
+                                <textarea id="message" type="message" name="message" placeholder="Message"
+                                    required></textarea>
+
+                            </div>
+                        </div>
+                        <!-- Honeypot Spam Protection -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <!-- Custom Confirmation / Success Page -->
+                        <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+                        <button type="submit">Submit Form</button>
+                    </form>
+
+                </section>
+        </div>
+        </main>
+    </div>
+
+    <!--Flipping Card JS-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.matchMedia('(hover: none)').matches) {
+                document.querySelectorAll('.flip-card').forEach(card => {
+                    card.addEventListener('click', () => {
+                        card.classList.toggle('is-flipped');
+                    });
+                });
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
