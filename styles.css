@@ -622,6 +622,16 @@ carousel-container::-webkit-scrollbar {
     color: black;
 }
 
+.flip-card-front {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
 @media (max-width: 600px) {
     .flip-card-back h2 {
         font-size: 1.1rem;
