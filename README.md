@@ -1,6 +1,6 @@
 👋🏾 Welcome to my personal website!
 
-You can access my website here: https://diya-pottangadi.github.io/portfolio/Portfolio/home.html
+You can access my website here: https://diya-pottangadi.github.io/portfolio/home.html
 
 Read about my design and development process: [Blog Post](https://www.notion.so/My-Portfolio-A-Long-Time-In-Progress-2242228ebc278039a47ed716d81bbe75?source=copy_link)
 
