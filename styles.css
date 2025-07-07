@@ -622,6 +622,15 @@ carousel-container::-webkit-scrollbar {
     color: black;
 }
 
+@media (max-width: 600px) {
+    .flip-card-back h2 {
+        font-size: 1.1rem;
+    }
+    .flip-card-back p {
+        font-size: 0.85rem;
+    }
+}
+
 .flip-card-front img {
     display: block;
     margin: 30px auto 25px auto;
