@@ -692,7 +692,6 @@ carousel-container::-webkit-scrollbar {
     position: static;
     left: 16px;
     bottom: 15px;
-    z-index: 1;
     gap: 8px;
 }
 
